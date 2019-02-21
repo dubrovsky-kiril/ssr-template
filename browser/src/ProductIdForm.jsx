@@ -1,7 +1,7 @@
 import React from "react";
 import DumbForm from "./components/Form/Form.dumb.jsx";
 import SmartInput from "./components/Input/Input.smart.jsx";
-import DumbButton from "./components/Button/Button.dumb.jsx";
+import SmartButton from "./components/Button/Button.smart.jsx";
 
 const ProductIdForm = ({ formId, formMethod, formAction }) => {
   return (
@@ -12,7 +12,7 @@ const ProductIdForm = ({ formId, formMethod, formAction }) => {
         label="Product id"
         isRequired
       />
-      <DumbButton type="submit" form={formId} text="Submit" />
+      <SmartButton type="submit" form={formId} text="Submit" />
     </DumbForm>
   )
 };

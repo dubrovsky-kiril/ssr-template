@@ -5,7 +5,6 @@ import DumbButton from "./components/Button/Button.dumb.jsx";
 
 const ProductIdForm = ({ formId, formMethod, formAction }) => {
   return (
-    <>
     <DumbForm formId={formId} formMethod={formMethod} formAction={formAction}>
       <SmartInput
         id="productId"
@@ -13,9 +12,8 @@ const ProductIdForm = ({ formId, formMethod, formAction }) => {
         label="Product id"
         isRequired
       />
+      <DumbButton type="submit" form={formId} text="Submit" />
     </DumbForm>
-    <DumbButton type="submit" form={formId} text="Submit" />
-    </>
   )
 };
 

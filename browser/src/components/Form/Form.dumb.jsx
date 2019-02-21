@@ -7,12 +7,3 @@ const DumbForm = ({ formAction, formMethod, formId, children }) => (
 );
 
 export default DumbForm;
-
-{/* <SmartInput
-      id="seoTitle"
-      type={inputType}
-      label={inputLabel}
-      isRequired={isRequired}
-    />
-  </form>
-  <DumbButton type="submit" text={buttonText} form={formId} /> */}

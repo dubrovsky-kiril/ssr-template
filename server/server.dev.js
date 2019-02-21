@@ -2,7 +2,9 @@ const appConfig = require("../appConfig");
 const webpack = require("webpack");
 const express = require("express");
 const devMiddleware = require("webpack-dev-middleware");
+const hotMiddleware = require("webpack-hot-middleware");
 const path = require("path");
+
 const webpackConfig = require("../webpack.config.js")(appConfig.APP_MOD);
 
 const app = express();
@@ -15,6 +17,9 @@ app.use(
     publicPath: webpackConfig.output.publicPath
   })
 );
+
+app.use(hotMiddleware(compiler));
+
 
 app.get("*", (req, res) => res.sendFile(path.join(compiler.outputPath, "index.html")));
 

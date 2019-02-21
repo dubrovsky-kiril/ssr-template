@@ -22,10 +22,10 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10",
-    "react-hot-loader": "^4.7.1",
     "webpack-cli": "^3.2.3",
     "webpack-dev-middleware": "^3.6.0",
     "webpack-dev-server": "^3.2.0",
+    "webpack-hot-middleware": "^2.24.3",
     "webpack-merge": "^4.2.1"
   }
 }

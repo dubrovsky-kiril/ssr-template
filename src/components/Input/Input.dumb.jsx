@@ -1,17 +1,18 @@
 import React from "react";
 
-const DumbInput = ({ label, text, type, id, value, handleOnChange }) => (
-  <div className="form-group">
-    <label htmlFor={label}>{text}</label>
-    <input
-      type={type}
-      className="form-control"
-      id={id}
-      value={value}
-      onChange={handleOnChange}
-      required
-    />
-  </div>
-)
+const DumbInput = ({ label, type, id, value, handleOnChange, isRequired }) => (
+  <>
+  <label htmlFor={id}>
+    {label}
+  </label>
+  <input
+    id={id}
+    type={type}
+    value={value}
+    onChange={handleOnChange}
+    required={isRequired}
+  />
+  </>
+);
 
 export default DumbInput;

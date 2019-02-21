@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import DumbInput from "./Input.dumb.jsx";
 
-const handleOnChange = changeSeoTitle => e => changeSeoTitle(e.target.value);
+const handleOnChange = changeValue => e => changeValue(e.target.value);
 
-const SmartInput = () => {
-  const [seo_title, changeSeoTitle] = useState("");
+const SmartInput = ({ ...rest }) => {
+  const [value, changeValue] = useState("");
 
   return (
-    <form id="article-form">
-      <DumbInput
-        text="SEO title"
-        label="seo_title"
-        type="text"
-        id="seo_title"
-        value={seo_title}
-        handleOnChange={handleOnChange(changeSeoTitle)}
-      />
-    </form>
+    <DumbInput
+      value={value}
+      handleOnChange={handleOnChange(changeValue)}
+      {...rest}
+    />
   )
 }
 

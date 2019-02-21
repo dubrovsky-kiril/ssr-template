@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SmartInput from "./components/Input/Input.smart.jsx";
+import ProductIdForm from "./ProductIdForm.jsx";
 
-ReactDOM.render(<SmartInput />, document.getElementById("create-article-form"));
+ReactDOM.render(<ProductIdForm />, document.getElementById("root"));

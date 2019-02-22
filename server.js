@@ -1,10 +1,10 @@
-const appConfig = require("../appConfig");
+const appConfig = require("./appConfig");
 const webpack = require("webpack");
 const express = require("express");
 const devMiddleware = require("webpack-dev-middleware");
 const hotMiddleware = require("webpack-hot-middleware");
 const path = require("path");
-const webpackDevConfig = require("../webpack.config.js")(appConfig.APP_MOD);
+const webpackDevConfig = require("./webpack.config.js")(appConfig.APP_MOD);
 
 const SERVER = express();
 const COMPLIED_WEBPACK_CONFIG = webpack(webpackDevConfig);

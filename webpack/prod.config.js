@@ -5,9 +5,7 @@ const baseConfig = require("./base.config.js");
 
 module.exports = merge(baseConfig, {
   entry: {
-    app: [
-      path.resolve(__dirname, "..", "browser", "src", "index")
-    ]
+    app: [path.resolve(__dirname, "..", "src", "index")]
   },
   mode: "production",
   devtool: "source-map",
@@ -15,12 +13,14 @@ module.exports = merge(baseConfig, {
     rules: [
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: true
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              minimize: true
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.(js|jsx)$/,

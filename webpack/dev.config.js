@@ -7,7 +7,7 @@ module.exports = merge(baseConfig, {
   entry: {
     app: [
       "webpack-hot-middleware/client",
-      path.resolve(__dirname, "..", "browser", "src", "index")
+      path.resolve(__dirname, "..", "src", "index")
     ]
   },
   mode: "development",
@@ -16,9 +16,11 @@ module.exports = merge(baseConfig, {
     rules: [
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-loader'
-        }]
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
       },
       {
         test: /\.(js|jsx)$/,
@@ -27,9 +29,7 @@ module.exports = merge(baseConfig, {
       }
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   output: {
     publicPath: "/"
   }

@@ -2,17 +2,19 @@ import React from "react";
 import Form from "./components/Form/Form.jsx";
 import Input from "./components/Input/Input.jsx";
 
-const formId = "productIdForm";
+const FORM_ID = "productIdForm";
+const INPUT_ID = "productId";
 
 const handleOnSubmit = e => {
   e.preventDefault();
-  console.log(e.target);
+
+  console.log(e.target[INPUT_ID].value);
 };
 
 const ProductIdForm = () => {
   return (
-    <Form formId={formId} handleOnSubmit={handleOnSubmit} buttonTxt="Search">
-      <Input id="productId" type="text" label="Product id" isRequired />
+    <Form formId={FORM_ID} handleOnSubmit={handleOnSubmit} buttonTxt="Search">
+      <Input id={INPUT_ID} type="text" label="Product id" isRequired />
     </Form>
   );
 };

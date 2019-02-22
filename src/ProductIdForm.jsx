@@ -3,8 +3,6 @@ import DumbForm from "./components/Form/Form.dumb.jsx";
 import SmartInput from "./components/Input/Input.smart.jsx";
 import SmartButton from "./components/Button/Button.smart.jsx";
 
-console.log(APP_MOD);
-
 const ProductIdForm = ({ formId, formMethod, formAction }) => {
   return (
     <DumbForm formId={formId} formMethod={formMethod} formAction={formAction}>

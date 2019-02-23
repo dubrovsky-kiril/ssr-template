@@ -4,4 +4,4 @@ import ProductIdForm from "./ProductIdForm";
 
 ReactDOM.render(<ProductIdForm />, document.getElementById("root"));
 
-if (module.hot) module.hot.accept(() => ProductIdForm)
+if (module.hot) module.hot.accept(() => ProductIdForm);

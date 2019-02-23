@@ -11,5 +11,13 @@ module.exports = {
     new webpack.DefinePlugin({
       APP_MOD: JSON.stringify(appConfig.APP_MOD)
     })
-  ]
+  ],
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
+  },
+  module: {
+    rules: [
+      { test: /\.(ts|tsx)?$/, loader: 'ts-loader' }
+    ]
+  }
 };

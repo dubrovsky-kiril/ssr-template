@@ -21,8 +21,12 @@
     "webpack": "^4.29.5"
   },
   "devDependencies": {
+    "@types/react": "^16.8.4",
+    "@types/react-dom": "^16.8.2",
     "clean-webpack-plugin": "^1.0.1",
     "nodemon": "^1.18.10",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
     "webpack-cli": "^3.2.3",
     "webpack-dev-middleware": "^3.6.0",
     "webpack-hot-middleware": "^2.24.3",

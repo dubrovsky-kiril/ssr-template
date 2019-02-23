@@ -3,18 +3,18 @@ import * as React from "react";
 type ButtonTypes = {
   type?: string;
   form?: string;
-  text: string;
+  txt: string;
   isPending?: boolean;
 };
 
 const Button: React.FunctionComponent<ButtonTypes> = ({
   type = "button",
   form,
-  text,
+  txt,
   isPending = false
 }) => (
   <button type={type} form={form}>
-    {isPending ? "Loading" : text}
+    {isPending ? "Loading" : txt}
   </button>
 );
 

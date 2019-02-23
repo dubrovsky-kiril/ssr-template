@@ -1,20 +1,22 @@
 import React from "react";
-import DumbForm from "./components/Form/Form.dumb.jsx";
-import SmartInput from "./components/Input/Input.smart.jsx";
-import DumbButton from "./components/Button/Button.dumb.jsx";
+import Form from "./components/Form/Form.jsx";
+import Input from "./components/Input/Input.jsx";
 
-const ProductIdForm = ({ formId, formMethod, formAction }) => {
+const FORM_ID = "productIdForm";
+const INPUT_ID = "productId";
+
+const handleOnSubmit = e => {
+  e.preventDefault();
+
+  console.log(e.target[INPUT_ID].value);
+};
+
+const ProductIdForm = () => {
   return (
-    <DumbForm formId={formId} formMethod={formMethod} formAction={formAction}>
-      <SmartInput
-        id="productId"
-        type="text"
-        label="Product id"
-        isRequired
-      />
-      <DumbButton type="submit" form={formId} text="Submit" />
-    </DumbForm>
-  )
+    <Form formId={FORM_ID} handleOnSubmit={handleOnSubmit} buttonTxt="Search">
+      <Input id={INPUT_ID} type="text" label="Product id" isRequired />
+    </Form>
+  );
 };
 
 export default ProductIdForm;

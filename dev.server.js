@@ -23,10 +23,9 @@ SERVER.use(
 SERVER.use(hotMiddleware(COMPLIED_WEBPACK_CONFIG));
 
 SERVER.get("*", (_, res) => {
-  // TODO: handle err
   COMPLIED_WEBPACK_CONFIG.outputFileSystem.readFile(
     INDEX_HTML_PATH,
-    (err, result) => {
+    (_, result) => {
       res.set("content-type", "text/html");
       res.send(result);
     }

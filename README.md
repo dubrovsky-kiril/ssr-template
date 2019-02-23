@@ -2,7 +2,7 @@ TODO's :
 
 - [x] Add webpack.DefinePlugin
 - [x] Add TS
-- [ ] Add prettier
+- [x] Add prettier
 - [ ] Add styled-components
 - [ ] Add unit tests
 - [ ] Add precommit hook for unit tests

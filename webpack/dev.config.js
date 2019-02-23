@@ -21,11 +21,6 @@ module.exports = merge(baseConfig, {
             loader: "html-loader"
           }
         ]
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"]
       }
     ]
   },

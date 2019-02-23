@@ -16,9 +16,12 @@ const INDEX_HTML_PATH = path.join(
 
 SERVER.use(
   devMiddleware(COMPLIED_WEBPACK_CONFIG, {
-    publicPath: webpackDevConfig.output.publicPath
+    publicPath: webpackDevConfig.output.publicPath,
+    stats: {
+      colors: true
+    }
   })
-);
+)
 
 SERVER.use(hotMiddleware(COMPLIED_WEBPACK_CONFIG));
 

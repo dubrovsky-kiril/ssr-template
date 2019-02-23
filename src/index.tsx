@@ -1,10 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import ProductIdForm from "./ProductIdForm";
 
-type AppProps = {
-  msg: string
-}
+ReactDOM.render(<ProductIdForm />, document.getElementById("root"));
 
-const App: React.SFC<AppProps> = ({ msg }) => <div>{msg}</div>
-
-ReactDOM.render(<App msg="Hello tyfdsescript!" />, document.getElementById("root"));
+if (module.hot) module.hot.accept(() => ProductIdForm)

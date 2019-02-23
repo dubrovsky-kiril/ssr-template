@@ -1,6 +1,6 @@
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const appConfig = require("../appConfig");
+const config = require("../config");
 
 module.exports = {
   plugins: [
@@ -9,15 +9,13 @@ module.exports = {
       filename: "./index.html"
     }),
     new webpack.DefinePlugin({
-      APP_MOD: JSON.stringify(appConfig.APP_MOD)
+      APP_MOD: JSON.stringify(config.APP_MOD)
     })
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
   module: {
-    rules: [
-      { test: /\.(ts|tsx)?$/, loader: 'awesome-typescript-loader' }
-    ]
+    rules: [{ test: /\.(ts|tsx)?$/, loader: "awesome-typescript-loader" }]
   }
 };

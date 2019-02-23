@@ -8,7 +8,7 @@ module.exports = merge(baseConfig, {
     app: [
       "webpack-hot-middleware/client",
       path.resolve(__dirname, "..", "src", "index")
-    ],
+    ]
   },
   mode: "development",
   devtool: "eval",

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=dev nodemon ./server",
-    "test": "jest",
+    "test": "jest --watch",
     "build": "NODE_ENV=prod webpack --progress"
   },
   "husky": {
@@ -15,10 +15,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,ts,tsx,md}": ["prettier --write", "git add"]
   },
   "dependencies": {
     "react": "^16.8.3",
@@ -36,6 +33,7 @@
     "clean-webpack-plugin": "^1.0.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
     "express": "^4.16.4",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",

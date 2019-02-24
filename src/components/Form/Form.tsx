@@ -16,7 +16,7 @@ const Form: React.FunctionComponent<FormTypes> = ({
 }) => (
   <form id={formId} onSubmit={handleOnSubmit}>
     {children}
-    <Button type="submit" form={formId} text={buttonTxt} />
+    <Button type="submit" form={formId} txt={buttonTxt} />
   </form>
 );
 

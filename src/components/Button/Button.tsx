@@ -9,13 +9,15 @@ type ButtonTypes = {
 
 const Button: React.FunctionComponent<ButtonTypes> = ({
   type = "button",
-  form,
+  form = "",
   txt,
   isPending = false
-}) => (
-  <button type={type} form={form}>
-    {isPending ? "Loading" : txt}
-  </button>
-);
+}) => {
+  return (
+    <button type={type} form={form}>
+      {isPending ? "Loading" : txt}
+    </button>
+  );
+};
 
 export default Button;

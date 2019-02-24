@@ -4,6 +4,7 @@ TODO's :
 - [x] Add TS
 - [x] Add prettier
 - [ ] Add unit tests
+- [ ] Add tslint to check for unused variables
 - [ ] Add precommit hook for unit tests
 - [ ] Add Storybook
 - [ ] Add CI to hithub

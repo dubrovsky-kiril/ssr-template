@@ -9,6 +9,7 @@ describe("Input", () => {
     const wrapper = shallow(
       <Input id="productId" label="Product id" type="text" />
     );
+
     expect(wrapper.find("label").props().htmlFor).toBe("productId");
     expect(wrapper.find("input").props().id).toBe("productId");
   });
@@ -16,21 +17,32 @@ describe("Input", () => {
     const wrapper = shallow(
       <Input id="productId" label="Product id" type="text" />
     );
+
     expect(wrapper.find("label").text()).toEqual("Product id");
   });
   it("should apply 'type' prop to input", () => {
     const wrapper = shallow(
       <Input id="productId" label="Product id" type="text" />
     );
+
     expect(wrapper.find("input").props().type).toBe("text");
   });
   it("should apply 'isRequired' prop to input", () => {
     const wrapper = shallow(
       <Input id="productId" label="Product id" type="text" />
     );
+
     expect(wrapper.find("input").props().required).toBe(false);
 
     wrapper.setProps({ isRequired: true });
+
     expect(wrapper.find("input").props().required).toBe(true);
+  });
+  it("should match snapshot", () => {
+    const tree = shallow(
+      <Input id="productId" label="Product id" type="text" />
+    );
+
+    expect(toJson(tree)).toMatchSnapshot();
   });
 });

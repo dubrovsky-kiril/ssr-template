@@ -5,6 +5,7 @@
   "author": "dubrovsky.K <dubrovsky.kiril@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "storybook": "start-storybook -p 6006 -c .storybook",
     "start": "NODE_ENV=dev nodemon ./server",
     "test": "jest --watch",
     "build": "NODE_ENV=prod webpack --progress"
@@ -22,6 +23,7 @@
     "react-dom": "^16.8.3"
   },
   "devDependencies": {
+    "@storybook/react": "^4.1.13",
     "@types/enzyme": "^3.9.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.6",

@@ -16,6 +16,9 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js"]
   },
   module: {
-    rules: [{ test: /\.(ts|tsx)?$/, loader: "awesome-typescript-loader" }]
+    rules: [
+      { test: /\.(ts|tsx)?$/, loader: "awesome-typescript-loader" },
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+    ]
   }
 };

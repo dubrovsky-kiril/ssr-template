@@ -6,7 +6,7 @@ TODO's :
 - [x] Add unit tests
 - [x] Add precommit hook for unit tests
 - [ ] Add Storybook
-- [ ] Add CI to hithub
-- [ ] Add CSS GRIDS
+- [ ] Add CI to github
 - [ ] Add styled-components
 - [ ] Deploy to Netlify
+- [ ] Add intl

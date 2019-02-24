@@ -1,5 +1,6 @@
-import { configure } from "@storybook/react";
+import { configure, setAddon } from "@storybook/react";
 
+// setAddon();
 const stories = require.context("../src", true, /.stories.tsx$/);
 
 function loadStories() {

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should match snapshot 1`] = `
+<Fragment>
+  <label
+    htmlFor="productId"
+  >
+    Product id
+  </label>
+  <input
+    id="productId"
+    name="productId"
+    required={false}
+    type="text"
+  />
+</Fragment>
+`;

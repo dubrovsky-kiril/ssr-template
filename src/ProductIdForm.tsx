@@ -8,7 +8,7 @@ const INPUT_ID: string = "productId";
 const handleOnSubmit = (e: React.FormEvent<HTMLElement>): void => {
   e.preventDefault();
 
-  console.log(e.target[INPUT_ID].value);
+  console.log(INPUT_ID, e.target[INPUT_ID].value);
 };
 
 const ProductIdForm = () => (

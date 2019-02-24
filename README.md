@@ -5,7 +5,7 @@ TODO's :
 - [x] Add prettier
 - [x] Add unit tests
 - [x] Add precommit hook for unit tests
-- [ ] Add Storybook
+- [x] Add Storybook
 - [ ] Add CI to github
 - [ ] Add styled-components
 - [ ] Deploy to Netlify

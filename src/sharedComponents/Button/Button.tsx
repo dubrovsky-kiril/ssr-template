@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
+// just an example of styled-components use
 const StyledButton = styled.button`
   background: transparent;
   border-radius: 3px;

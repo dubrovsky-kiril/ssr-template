@@ -11,7 +11,7 @@ const handleOnSubmit = (e: React.FormEvent<HTMLElement>): void => {
   console.log(INPUT_ID, e.target[INPUT_ID].value);
 };
 
-const ProductIdForm = () => (
+const ProductIdForm: React.FunctionComponent = () => (
   <Form formId={FORM_ID} handleOnSubmit={handleOnSubmit} buttonTxt="Search">
     <Input id={INPUT_ID} type="text" label="Product id" isRequired />
   </Form>

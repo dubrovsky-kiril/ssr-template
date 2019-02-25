@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input should match snapshot 1`] = `
-<Fragment>
+<div>
   <label
     htmlFor="productId"
   >
@@ -13,5 +13,5 @@ exports[`Input should match snapshot 1`] = `
     required={false}
     type="text"
   />
-</Fragment>
+</div>
 `;

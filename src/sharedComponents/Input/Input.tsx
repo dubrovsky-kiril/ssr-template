@@ -18,10 +18,10 @@ const Input: React.FunctionComponent<InputTypes> = ({
   isRequired = false
 }) => {
   return (
-    <>
+    <div>
       <label htmlFor={id}>{label}</label>
       <input id={id} name={id} type={type} required={isRequired} />
-    </>
+    </div>
   );
 };
 

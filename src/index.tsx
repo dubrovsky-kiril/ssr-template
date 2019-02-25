@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import ProductIdForm from "./ProductIdForm";
+import ProductIdForm from "./components/ProductIdForm";
 
 ReactDOM.render(<ProductIdForm />, document.getElementById("root"));
 

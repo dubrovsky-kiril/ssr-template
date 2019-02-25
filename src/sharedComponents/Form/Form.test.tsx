@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 import Form from "./Form";

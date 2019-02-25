@@ -6,7 +6,10 @@ TODO's :
 - [x] Add unit tests
 - [x] Add precommit hook for unit tests
 - [x] Add Storybook
-- [ ] Add CI/CD to github
 - [ ] Add styled-components
-- [ ] Deploy to Netlify
+- [ ] Add react-routing/add views folder
+- [ ] Add Request helper
+- [ ] Add CI to github
+- [ ] Add tslint
+- [x] Deploy to Netlify
 - [ ] Add intl

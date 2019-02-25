@@ -1,6 +1,5 @@
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const config = require("../config");
 
 module.exports = {
   plugins: [
@@ -9,7 +8,7 @@ module.exports = {
       filename: "./index.html"
     }),
     new webpack.DefinePlugin({
-      APP_MOD: JSON.stringify(config.APP_MOD)
+      APP_MOD: JSON.stringify(process.env.NODE_ENV)
     })
   ],
   resolve: {

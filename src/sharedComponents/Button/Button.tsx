@@ -1,4 +1,16 @@
 import * as React from "react";
+import styled from "styled-components";
+
+// just an example of styled-components use
+const StyledButton = styled.button`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+`;
 
 type ButtonTypes = {
   /** defines type of button (submit, button etc.) */
@@ -18,9 +30,9 @@ const Button: React.FunctionComponent<ButtonTypes> = ({
   isPending = false
 }) => {
   return (
-    <button type={type} form={form}>
+    <StyledButton type={type} form={form}>
       {isPending ? "Loading" : txt}
-    </button>
+    </StyledButton>
   );
 };
 

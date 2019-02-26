@@ -3,7 +3,7 @@ const express = require("express");
 const devMiddleware = require("webpack-dev-middleware");
 const hotMiddleware = require("webpack-hot-middleware");
 const path = require("path");
-const webpackDevConfig = require("./webpack.config.js")(process.env.NODE_ENV);
+const webpackDevConfig = require("./webpack/client.dev.js");
 
 const SERVER = express();
 const COMPLIED_WEBPACK_CONFIG = webpack(webpackDevConfig);

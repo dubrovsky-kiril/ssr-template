@@ -5,23 +5,14 @@
   "author": "dubrovsky.K <dubrovsky.kiril@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "ssr": "webpack -w & nodemon server.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "start": "NODE_ENV=dev nodemon ./server/dev.server.js",
+    "start": "NODE_ENV=dev nodemon ./server",
     "test": "jest --watch",
     "build": "NODE_ENV=prod webpack --progress"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && jest"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "dependencies": {
+    "cors": "^2.8.5",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-router-dom": "^4.3.1",

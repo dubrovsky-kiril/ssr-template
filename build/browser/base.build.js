@@ -4,11 +4,12 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: "./src/browser/index.html",
       filename: "./index.html"
     }),
     new webpack.DefinePlugin({
-      APP_MOD: JSON.stringify(process.env.NODE_ENV)
+      __isProdMod__: JSON.stringify(process.env.NODE_ENV === "prod"),
+      __isBrowser__: JSON.stringify(true)
     })
   ],
   resolve: {

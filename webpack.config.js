@@ -1,1 +1,2 @@
-module.exports = (appMod = "prod") => require(`./webpack/${appMod}.config.js`);
+module.exports = (appMod = "prod") =>
+  require(`./build/browser/${appMod}.build.js`);

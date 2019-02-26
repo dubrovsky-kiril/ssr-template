@@ -1,9 +1,9 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const baseConfig = require("./base.config.js");
+const baseBuild = require("./base.build.js");
 
-module.exports = merge(baseConfig, {
+module.exports = merge(baseBuild, {
   entry: {
     app: [path.resolve(__dirname, "..", "src", "index")]
   },

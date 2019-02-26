@@ -1,11 +1,11 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const baseConfig = require("./base.config.js");
+const baseConfig = require("./client.base.js");
 
 module.exports = merge(baseConfig, {
   entry: {
-    app: [path.resolve(__dirname, "..", "src", "index")]
+    app: [path.resolve(__dirname, "..", "..", "src", "index")]
   },
   mode: "production",
   devtool: "source-map",

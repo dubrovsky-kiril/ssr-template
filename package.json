@@ -8,7 +8,9 @@
     "storybook": "start-storybook -p 6006 -c .storybook",
     "start": "NODE_ENV=dev nodemon ./server",
     "test": "jest --watch",
-    "build": "NODE_ENV=prod webpack --config webpack/client.prod.js --progress"
+    "build:client": "NODE_ENV=prod webpack --config webpack/client/client.prod.js --progress",
+    "build:server": "NODE_ENV=prod webpack --config webpack/server.prod.js --progress",
+    "build": "yarn build:client"
   },
   "husky": {
     "hooks": {

@@ -31,7 +31,7 @@ module.exports = merge(baseConfig, {
   },
   output: {
     path: `${process.cwd()}/server/public`,
-    filename: "./js/[name].[hash].js",
+    filename: "./js/index.js",
     publicPath: "/"
   }
 });

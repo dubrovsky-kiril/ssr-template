@@ -1,13 +1,15 @@
-import express from "express";
-import React from "react";
-import ReactDOMServer from "react-dom/server";
+import * as express from "express";
+import * as React from "react";
+import * as ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router";
 import ProductIdForm from "../client/components/ProductIdForm";
 
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  const context = {};
+  const context = {
+    url: undefined
+  };
 
   const html = ReactDOMServer.renderToString(
     <StaticRouter location={req.originalUrl} context={context}>
@@ -21,9 +23,11 @@ router.get("/", (req, res) => {
     });
     res.end();
   } else {
-    res.status(200).render("./views/index.pug", {
+    res.status(200).render("index", {
       html,
       initialState: JSON.stringify(undefined)
     });
   }
 });
+
+export default router;

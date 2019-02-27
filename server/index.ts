@@ -1,11 +1,12 @@
-import express from "express";
+import * as express from "express";
 import ssr from "./ssr";
 
 const app = express();
 
 app.set("view engine", "pug");
+app.set("views", `${process.cwd()}/server/views`);
 
-app.use(express.static("public"));
+app.use(express.static(`${process.cwd()}/server/public`));
 
 app.use("/*", ssr);
 

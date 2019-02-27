@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
@@ -16,6 +17,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(["bin"], { root: `${process.cwd()}/server` }),
     new webpack.DefinePlugin({
       __appMod__: JSON.stringify(process.env.NODE_ENV)
     })

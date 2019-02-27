@@ -6,9 +6,9 @@ TODO's :
 - [x] Add unit tests
 - [x] Add precommit hook for unit tests
 - [x] Add Storybook
-- [ ] Add absolute paths on server/webpack
-- [ ] Add styled-components
-- [ ] Add react-routing/add views folder
+- [x] Add absolute paths on server/webpack
+- [x] Add styled-components
+- [ ] Add react-routing/add contents folder? Or use hooks instead?
 - [ ] Add Request helper
 - [ ] Add CI to github
 - [ ] Add tslint

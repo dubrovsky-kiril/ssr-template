@@ -1,12 +1,8 @@
 const webpack = require("webpack");
 const merge = require("webpack-merge");
-const path = require("path");
 const baseConfig = require("./client.base.js");
 
 module.exports = merge(baseConfig, {
-  entry: {
-    app: [path.resolve(__dirname, "..", "..", "src", "index")]
-  },
   mode: "development",
   devtool: "eval",
   devServer: {

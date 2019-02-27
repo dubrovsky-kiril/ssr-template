@@ -4,9 +4,6 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const baseConfig = require("./client.base.js");
 
 module.exports = merge(baseConfig, {
-  entry: {
-    app: [path.resolve(__dirname, "..", "..", "src", "index")]
-  },
   mode: "production",
   devtool: "source-map",
   module: {
@@ -24,11 +21,7 @@ module.exports = merge(baseConfig, {
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin(["dist"], {
-      root: path.join(__dirname, "..")
-    })
-  ],
+  plugins: [new CleanWebpackPlugin(["dist"], { root: process.cwd() })],
   optimization: {
     splitChunks: {
       chunks: "all"

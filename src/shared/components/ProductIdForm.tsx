@@ -1,6 +1,6 @@
 import * as React from "react";
-import Form from "../sharedComponents/Form/Form";
-import Input from "../sharedComponents/Input/Input";
+import Form from "../reusableComponents/Form/Form";
+import Input from "../reusableComponents/Input/Input";
 
 const FORM_ID: string = "productIdForm";
 const INPUT_ID: string = "productId";

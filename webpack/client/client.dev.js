@@ -1,10 +1,20 @@
 const webpack = require("webpack");
 const merge = require("webpack-merge");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const baseConfig = require("./client.base.js");
+
+console.log(`${process.cwd()}/webpack/index.dev.html`);
 
 module.exports = merge(baseConfig, {
   mode: "development",
   devtool: "eval",
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: `${process.cwd()}/webpack/index.dev.html`,
+      filename: "index.html"
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     hot: true,
     publicPath: "/",
@@ -14,13 +24,8 @@ module.exports = merge(baseConfig, {
     rules: [
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
+        use: [{ loader: "html-loader" }]
       }
     ]
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  }
 });

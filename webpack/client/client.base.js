@@ -8,7 +8,7 @@ module.exports = {
       filename: "./index.html"
     }),
     new webpack.DefinePlugin({
-      APP_MOD: JSON.stringify(process.env.NODE_ENV)
+      __appMod__: JSON.stringify(process.env.NODE_ENV)
     })
   ],
   resolve: {

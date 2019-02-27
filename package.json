@@ -9,10 +9,10 @@
     "start": "NODE_ENV=dev webpack-dev-server --config webpack/client/client.dev.js",
     "test": "jest --watch",
     "build:client": "NODE_ENV=prod webpack --config webpack/client/client.prod.js --progress",
-    "build:server": "NODE_ENV=prod webpack --config webpack/server.prod.js --progress",
+    "build:server": "webpack --config webpack/server.prod.js --progress",
     "build": "yarn build:client && yarn build:server",
     "server": "node server/bin/server.js",
-    "prod": "yarn build && yarn server"
+    "run:prod": "yarn build && yarn server"
   },
   "husky": {
     "hooks": {

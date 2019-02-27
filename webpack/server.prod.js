@@ -1,10 +1,8 @@
-const path = require("path");
-const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  context: path.join(__dirname, "../server"),
+  context: `${process.cwd()}/server`,
   devtool: "source-map",
   entry: ["./index.ts"],
   mode: "production",
@@ -17,16 +15,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["bin"], { root: `${process.cwd()}/server` }),
-    new webpack.DefinePlugin({
-      __appMod__: JSON.stringify(process.env.NODE_ENV)
-    })
+    new CleanWebpackPlugin(["bin"], { root: `${process.cwd()}/server` })
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
   output: {
-    path: path.join(__dirname, "../server/bin"),
+    path: `${process.cwd()}/server/bin`,
     filename: "./server.js"
   }
 };

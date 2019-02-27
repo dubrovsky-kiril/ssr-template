@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const baseConfig = require("./client.base.js");
@@ -22,7 +23,10 @@ module.exports = merge(baseConfig, {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["public"], { root: `${process.cwd()}/server` })
+    new CleanWebpackPlugin(["public"], { root: `${process.cwd()}/server` }),
+    new webpack.DefinePlugin({
+      __appMod__: JSON.stringify(process.env.NODE_ENV)
+    })
   ],
   optimization: {
     splitChunks: {

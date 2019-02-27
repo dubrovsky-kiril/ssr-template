@@ -2,7 +2,7 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: {
-    app: `${process.cwd()}/src/client/index.tsx`
+    app: `${process.cwd()}/client/index.tsx`
   },
   plugins: [
     new webpack.DefinePlugin({

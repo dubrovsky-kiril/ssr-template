@@ -1,9 +1,9 @@
-const path = require("path");
 const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const baseConfig = require("./client.base.js");
 
 module.exports = merge(baseConfig, {
+  context: `${process.cwd()}/client`,
   mode: "production",
   devtool: "source-map",
   module: {
@@ -21,13 +21,17 @@ module.exports = merge(baseConfig, {
       }
     ]
   },
-  plugins: [new CleanWebpackPlugin(["dist"], { root: process.cwd() })],
+  plugins: [
+    new CleanWebpackPlugin(["public"], { root: `${process.cwd()}/server` })
+  ],
   optimization: {
     splitChunks: {
       chunks: "all"
     }
   },
   output: {
-    filename: "[name].[hash].js"
+    path: `${process.cwd()}/server/public`,
+    filename: "./js/[name].[hash].js",
+    publicPath: "/"
   }
 });

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "start": "NODE_ENV=dev nodemon ./server/server.dev.js",
+    "start": "NODE_ENV=dev webpack-dev-server --config webpack/client/client.dev.js",
     "test": "jest --watch",
     "build:client": "NODE_ENV=prod webpack --config webpack/client/client.prod.js --progress",
     "build:server": "NODE_ENV=prod webpack --config webpack/server.prod.js --progress",
@@ -60,6 +60,7 @@
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-dev-middleware": "^3.6.0",
+    "webpack-dev-server": "^3.2.1",
     "webpack-hot-middleware": "^2.24.3",
     "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2"

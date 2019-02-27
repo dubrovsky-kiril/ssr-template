@@ -5,13 +5,15 @@ const baseConfig = require("./client.base.js");
 
 module.exports = merge(baseConfig, {
   entry: {
-    app: [
-      "webpack-hot-middleware/client",
-      path.resolve(__dirname, "..", "..", "src", "index")
-    ]
+    app: [path.resolve(__dirname, "..", "..", "src", "index")]
   },
   mode: "development",
   devtool: "eval",
+  devServer: {
+    hot: true,
+    publicPath: "/",
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {
@@ -24,8 +26,5 @@ module.exports = merge(baseConfig, {
       }
     ]
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
-  output: {
-    publicPath: "/"
-  }
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 });

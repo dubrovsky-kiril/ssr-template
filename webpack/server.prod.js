@@ -5,31 +5,26 @@ const nodeExternals = require("webpack-node-externals");
 module.exports = {
   context: path.join(__dirname, "../server"),
   devtool: "source-map",
-  entry: ["./routes/index.js"],
+  entry: ["./index.ts"],
   mode: "production",
   target: "node",
-  output: {
-    path: path.join(__dirname, "../server/bin"),
-    filename: "./server.js"
-  },
   externals: [nodeExternals()],
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["es2015", "stage-1"]
-          }
-        }
-      }
+      { test: /\.(ts|tsx)?$/, loader: "awesome-typescript-loader" },
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
     ]
   },
   plugins: [
     new webpack.DefinePlugin({
       __appMod__: JSON.stringify(process.env.NODE_ENV)
     })
-  ]
+  ],
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
+  },
+  output: {
+    path: path.join(__dirname, "../server/bin"),
+    filename: "./server.js"
+  }
 };

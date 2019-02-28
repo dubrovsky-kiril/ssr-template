@@ -1,9 +1,15 @@
 import * as express from "express";
+import webpack from "webpack";
+import webpackClientProdConfig from "../webpack/client/client.prod";
 import ssr from "./ssr";
 
-const app = express();
+const SERVER = express();
+const PORT = 8000;
+const COMPLIED_WEBPACK_CONFIG = webpack(webpackClientProdConfig);
 
-app.use(express.static(`${process.cwd()}/server/dist`));
-app.use("*", ssr);
+SERVER.use(express.static(`${process.cwd()}/server/dist`));
+SERVER.use("*", ssr);
 
-app.listen(3000, () => console.log("Application is listening on port 3000!"));
+SERVER.listen(PORT, () =>
+  console.log(`Application is listening on port ${PORT}!`)
+);

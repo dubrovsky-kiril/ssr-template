@@ -9,12 +9,11 @@ import ProductIdForm from "../client/components/ProductIdForm";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  const context = {
-    url: undefined
-  };
+  const context = { url: undefined };
+
+  const sheet = new ServerStyleSheet();
 
   const title = "Yobushki-vorobushki";
-  const sheet = new ServerStyleSheet();
   const body = ReactDOMServer.renderToString(
     sheet.collectStyles(
       <StaticRouter location={req.originalUrl} context={context}>

@@ -7,10 +7,10 @@ module.exports = merge(baseConfig, {
   mode: "production",
   devtool: "source-map",
   plugins: [
-    new CleanWebpackPlugin(["public"], { root: `${process.cwd()}/server` })
+    new CleanWebpackPlugin(["dist"], { root: `${process.cwd()}/server` })
   ],
   output: {
-    path: `${process.cwd()}/server/public`,
+    path: `${process.cwd()}/server/dist`,
     filename: "./js/client.js",
     publicPath: "/"
   }

@@ -1,5 +1,4 @@
 node_modules
-dist
 .vscode
-server/public
+server/dist
 server/bin

@@ -3,7 +3,7 @@ import ssr from "./ssr";
 
 const app = express();
 
-app.use(express.static(`${process.cwd()}/server/public`));
+app.use(express.static(`${process.cwd()}/server/dist`));
 app.use("/*", ssr);
 
 app.listen(3000, () => {

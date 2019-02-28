@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import ProductIdForm from "./components/ProductIdForm";
 
 const render = Component => {
-  const renderMethod = !!module.hot ? ReactDOM.render : ReactDOM.hydrate;
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
   renderMethod(
     <BrowserRouter>

@@ -12,7 +12,7 @@ const handleOnSubmit = (e: React.FormEvent<HTMLElement>): void => {
 };
 
 const ProductIdForm: React.FunctionComponent = () => (
-  <Form formId={FORM_ID} handleOnSubmit={handleOnSubmit} buttonTxt="Search">
+  <Form formId={FORM_ID} onSubmit={handleOnSubmit} buttonTxt="Search">
     <Input id={INPUT_ID} type="text" label="Product id" isRequired />
   </Form>
 );

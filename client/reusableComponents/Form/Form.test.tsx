@@ -6,7 +6,7 @@ import Form from "./Form";
 describe("Form", () => {
   it("should apply 'formId' prop to form and Button", () => {
     const wrapper = shallow(
-      <Form formId="productIdForm" handleOnSubmit={() => {}} buttonTxt="Search">
+      <Form formId="productIdForm" onSubmit={() => {}} buttonTxt="Search">
         <input />
       </Form>
     );
@@ -17,7 +17,7 @@ describe("Form", () => {
   it("should contain passed children ", () => {
     const children = <input />;
     const wrapper = shallow(
-      <Form formId="productIdForm" handleOnSubmit={() => {}} buttonTxt="Search">
+      <Form formId="productIdForm" onSubmit={() => {}} buttonTxt="Search">
         {children}
       </Form>
     );
@@ -32,11 +32,7 @@ describe("Form", () => {
   it("should apply onSubmit handler", () => {
     const handleOnSubmit = () => {};
     const wrapper = shallow(
-      <Form
-        formId="productIdForm"
-        handleOnSubmit={handleOnSubmit}
-        buttonTxt="Search"
-      >
+      <Form formId="productIdForm" onSubmit={handleOnSubmit} buttonTxt="Search">
         <input />
       </Form>
     );
@@ -45,7 +41,7 @@ describe("Form", () => {
   });
   it("should apply 'buttonTxt' prop to Button", () => {
     const wrapper = mount(
-      <Form formId="productIdForm" handleOnSubmit={() => {}} buttonTxt="Search">
+      <Form formId="productIdForm" onSubmit={() => {}} buttonTxt="Search">
         <input />
       </Form>
     );
@@ -55,7 +51,7 @@ describe("Form", () => {
   });
   it("should match snapshot", () => {
     const tree = shallow(
-      <Form formId="productIdForm" handleOnSubmit={() => {}} buttonTxt="Search">
+      <Form formId="productIdForm" onSubmit={() => {}} buttonTxt="Search">
         <input />
       </Form>
     );

@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router";
 import { ServerStyleSheet } from "styled-components";
-import getHTML from "./getHTML";
+import getHTMLString from "./getHTMLString";
 import ProductIdForm from "../client/components/ProductIdForm";
 
 const router = express.Router();
@@ -29,7 +29,7 @@ router.get("/", (req, res) => {
     });
     res.end();
   } else {
-    res.status(200).send(getHTML({ title, styles, body }));
+    res.status(200).send(getHTMLString({ title, styles, body }));
   }
 });
 

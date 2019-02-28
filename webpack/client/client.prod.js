@@ -11,7 +11,7 @@ module.exports = merge(baseConfig, {
   ],
   output: {
     path: `${process.cwd()}/server/public`,
-    filename: "./js/index.js",
+    filename: "./js/client.js",
     publicPath: "/"
   }
 });

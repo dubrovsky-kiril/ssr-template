@@ -13,7 +13,7 @@ const getHTMLString = ({ title, styles, body }: getHTMLStringTypes): string => `
     </head>
     <body>
       <div id="root">${body}</div>
-      <script src="js/index.js"></script>
+      <script src="js/client.js"></script>
     </body>
   </html>
 `;

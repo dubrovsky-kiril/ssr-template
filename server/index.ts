@@ -3,8 +3,8 @@ import ssr from "./ssr";
 
 const app = express();
 
-app.set("view engine", "ejs");
-app.set("views", `${process.cwd()}/server/views`);
+// app.set("view engine", "ejs");
+// app.set("views", `${process.cwd()}/server/views`);
 
 app.use(express.static(`${process.cwd()}/server/public`));
 

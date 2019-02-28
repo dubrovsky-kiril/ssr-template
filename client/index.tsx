@@ -1,7 +1,19 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import ProductIdForm from "./components/ProductIdForm";
 
-ReactDOM.hydrate(<ProductIdForm />, document.getElementById("root"));
+const render = Component => {
+  const renderMethod = !!module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
-if (module.hot) module.hot.accept(() => ProductIdForm);
+  renderMethod(
+    <BrowserRouter>
+      <Component />
+    </BrowserRouter>,
+    document.getElementById("root")
+  );
+};
+
+render(ProductIdForm);
+
+if (module.hot) module.hot.accept(() => render(ProductIdForm));

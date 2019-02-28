@@ -10,7 +10,6 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   const context = { url: undefined };
-
   const sheet = new ServerStyleSheet();
 
   const title = "Yobushki-vorobushki";

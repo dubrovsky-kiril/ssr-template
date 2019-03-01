@@ -15,3 +15,4 @@ TODO's :
 - [ ] Add tslint (not used variable, console.log, not used import warnings)
 - [ ] Deploy to Netlify
 - [ ] Add intl
+- [ ] Add SSR test

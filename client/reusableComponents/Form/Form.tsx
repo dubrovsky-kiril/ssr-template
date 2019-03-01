@@ -7,7 +7,7 @@ type FormTypes = {
   /** should contain inputs, selectors or other data entrance elements  */
   children: JSX.Element;
   /** should contain submit handler function that will receive children elements data */
-  handleOnSubmit(event: React.FormEvent<HTMLElement>): void;
+  onSubmit(event: React.FormEvent<HTMLElement>): void;
   /** should contain button text */
   buttonTxt: string;
 };
@@ -15,10 +15,10 @@ type FormTypes = {
 const Form: React.FunctionComponent<FormTypes> = ({
   formId,
   children,
-  handleOnSubmit,
+  onSubmit,
   buttonTxt
 }) => (
-  <form id={formId} onSubmit={handleOnSubmit}>
+  <form id={formId} onSubmit={onSubmit}>
     <div>{children}</div>
     <Button type="submit" form={formId} txt={buttonTxt} />
   </form>

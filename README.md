@@ -6,10 +6,12 @@ TODO's :
 - [x] Add unit tests
 - [x] Add precommit hook for unit tests
 - [x] Add Storybook
-- [ ] Add styled-components
-- [ ] Add react-routing/add views folder
+- [x] Add absolute paths on server/webpack
+- [x] Add styled-components
+- [x] Add react-routing/add contents folder
+- [ ] Use hooks for routing?
 - [ ] Add Request helper
 - [ ] Add CI to github
-- [ ] Add tslint
-- [x] Deploy to Netlify
+- [ ] Add tslint (not used variable, console.log, not used import warnings)
+- [ ] Deploy to Netlify
 - [ ] Add intl

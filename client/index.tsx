@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import ProductIdForm from "./components/ProductIdForm";
+import App from "./App";
 
 const render = Component => {
   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
@@ -14,6 +14,6 @@ const render = Component => {
   );
 };
 
-render(ProductIdForm);
+render(App);
 
-if (module.hot) module.hot.accept(() => render(ProductIdForm));
+if (module.hot) module.hot.accept(() => render(App));

@@ -4,7 +4,7 @@ import * as ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router";
 import { ServerStyleSheet } from "styled-components";
 import getHTMLString from "./getHTMLString";
-import ProductIdForm from "../client/components/ProductIdForm";
+import App from "../client/App";
 
 const router = express.Router();
 
@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
   const body = ReactDOMServer.renderToString(
     sheet.collectStyles(
       <StaticRouter location={req.originalUrl} context={context}>
-        <ProductIdForm />
+        <App />
       </StaticRouter>
     )
   );

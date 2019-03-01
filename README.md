@@ -12,6 +12,6 @@ TODO's :
 - [ ] Use hooks for routing?
 - [ ] Add Request helper
 - [ ] Add CI to github
-- [ ] Add tslint
+- [ ] Add tslint (not used variable, console.log, not used import warnings)
 - [ ] Deploy to Netlify
 - [ ] Add intl

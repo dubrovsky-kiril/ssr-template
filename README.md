@@ -8,9 +8,10 @@ TODO's :
 - [x] Add Storybook
 - [x] Add absolute paths on server/webpack
 - [x] Add styled-components
-- [ ] Add react-routing/add contents folder? Or use hooks instead?
+- [x] Add react-routing/add contents folder
+- [ ] Use hooks for routing?
 - [ ] Add Request helper
 - [ ] Add CI to github
 - [ ] Add tslint
-- [x] Deploy to Netlify
+- [ ] Deploy to Netlify
 - [ ] Add intl

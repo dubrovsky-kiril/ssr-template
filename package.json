@@ -12,7 +12,7 @@
     "build:server": "webpack --config webpack/server.prod.js --progress",
     "build": "yarn build:client && yarn build:server",
     "server": "node server/bin/server.js",
-    "run:prod": "yarn build && yarn server"
+    "start:prod": "yarn build && yarn server"
   },
   "husky": {
     "hooks": {

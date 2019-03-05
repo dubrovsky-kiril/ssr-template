@@ -2,13 +2,13 @@ const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: [`${process.cwd()}/client/index.tsx`],
+  entry: [`${process.cwd()}/src/index.tsx`],
   plugins: [
     new webpack.DefinePlugin({
       __appMod__: JSON.stringify(process.env.NODE_ENV)
     }),
     new HtmlWebPackPlugin({
-      template: `${process.cwd()}/webpack/index.dev.html`,
+      template: `${process.cwd()}/src/index.html`,
       filename: "index.html"
     })
   ],

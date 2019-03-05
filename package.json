@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "start": "NODE_ENV=dev webpack-dev-server --config webpack/client/client.dev.js",
+    "start": "NODE_ENV=dev webpack-dev-server --config webpack/dev.config.js",
     "test": "jest --watch",
-    "build": "NODE_ENV=prod webpack --config webpack/client/client.prod.js --progress"
+    "build": "NODE_ENV=prod webpack --config webpack/prod.config.js --progress"
   },
   "husky": {
     "hooks": {

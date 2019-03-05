@@ -1,16 +1,13 @@
 const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const baseConfig = require("./client.base.js");
+const baseConfig = require("./base.config.js");
 
 module.exports = merge(baseConfig, {
-  context: `${process.cwd()}/client`,
   mode: "production",
   devtool: "source-map",
-  plugins: [
-    new CleanWebpackPlugin(["dist"], { root: `${process.cwd()}/server` })
-  ],
+  plugins: [new CleanWebpackPlugin(["dist"])],
   output: {
-    path: `${process.cwd()}/server/dist`,
+    path: `${process.cwd()}/dist`,
     filename: "./js/client.js",
     publicPath: "/"
   }

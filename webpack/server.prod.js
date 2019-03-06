@@ -15,7 +15,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["bin"], { root: `${process.cwd()}/server` })
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [`${process.cwd()}/server/bin`]
+    })
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"]

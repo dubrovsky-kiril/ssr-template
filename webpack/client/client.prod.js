@@ -7,7 +7,9 @@ module.exports = merge(baseConfig, {
   mode: "production",
   devtool: "source-map",
   plugins: [
-    new CleanWebpackPlugin(["dist"], { root: `${process.cwd()}/server` })
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [`${process.cwd()}/server/dist`]
+    })
   ],
   output: {
     path: `${process.cwd()}/server/dist`,

@@ -35,7 +35,7 @@
   "devDependencies": {
     "express": "^4.16.4",
     "@storybook/addon-info": "^4.1.13",
-    "@storybook/addons": "^4.1.13",
+    "@storybook/addons": "^5.0.0",
     "@storybook/react": "^4.1.13",
     "@types/enzyme": "^3.9.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",

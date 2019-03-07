@@ -14,3 +14,6 @@ TODO's :
 - [ ] Add tslint (not used variable, console.log, not used import warnings)
 - [ ] Add intl
 - [ ] Add SSR test
+- [ ] Add theming
+- [ ] SVG loader
+- [ ] CSS Transitions

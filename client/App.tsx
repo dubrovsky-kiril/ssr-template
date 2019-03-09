@@ -2,9 +2,18 @@ import * as React from "react";
 import { Route, Link } from "react-router-dom";
 import ProductIdForm from "./components/ProductIdForm";
 import { FormattedMessage, FormattedHTMLMessage } from "react-intl";
+import LanguageToggler from "./reusableComponents/LanguageToggler/LanguageToggler";
+
+const toggleActiveLangauge = language => () => console.log(language);
 
 const App: React.FunctionComponent = () => (
   <div>
+    <LanguageToggler
+      activeLanguage="A"
+      languages={["A", "B", "C"]}
+      toggleActiveLangauge={toggleActiveLangauge}
+    />
+
     <nav>
       <ul>
         <li>
